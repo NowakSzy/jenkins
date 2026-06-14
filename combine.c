@@ -4,21 +4,12 @@
 #include "logger.h"
 
 int main(int argc, char *argv[]) {
-    struct mg_mgr mgr;
-
     if (argc > 1) {
         dynamic_log_level = atoi(argv[1]);
-        printf("[SYSTEM] Zmiana DYNAMICZNA poziomu logow na: %d\n", dynamic_log_level);
+        printf("--- ZMIANA DYNAMICZNA NA: %d ---\n", dynamic_log_level);
     }
-
-    LOG_INFO("MONGOOSE_SERVER", 101, "Uruchamianie serwera Mongoose...", "");
+    struct mg_mgr mgr;
     mg_mgr_init(&mgr);
-
-    LOG_WARN("MONGOOSE_SERVER", 102, "Ostrzezenie: Wykryto wolne polaczenie", "Klient_ID=45");
-    LOG_ERR("MONGOOSE_SERVER", 103, "Blad krytyczny odczytu z gniazda!", "Socket_Error_Code=104");
-
     mg_mgr_free(&mgr);
-    LOG_INFO("MONGOOSE_SERVER", 104, "Menedzer sieciowy zostal zamkniety.", "");
-
     return 0;
 }
