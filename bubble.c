@@ -65,7 +65,7 @@ int main(void) {
 
     signed char test5[] = { -128, -10, 0, 15, 127 };
     generuj_test("test5_posortowana.txt", 
-                 "Test najlepszego przypadku (Best-case scenario): Tablica jest juz poprawnie posortowana rosnaco przed uruchomieniem algorytmu. Sprawdza granice optymalizacji algorytmu (czy nie "psuje" prawidlowego szyku).", 
+                 "Test najlepszego przypadku (Best-case scenario): Tablica jest juz poprawnie posortowana rosnaco przed uruchomieniem algorytmu. Sprawdza granice optymalizacji algorytmu (czy nie 'psuje' prawidlowego szyku).", 
                  test5, 5);
 
     return 0;
