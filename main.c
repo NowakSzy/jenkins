@@ -3,7 +3,9 @@
 int main(void) {
     int arr[] = {5, 2, 8, 1, 9, 3};
     int n = 6;
-    int i, j, temp;
+    int i;
+    int j;
+    int temp;
 
     (void)printf("Tablica przed sortowaniem: ");
     for(i = 0; i < n; i++) {
