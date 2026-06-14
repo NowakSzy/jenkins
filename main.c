@@ -1,29 +1,31 @@
 #include <stdio.h>
 
-int main() {
-    int arr[] = {45, 12, 89, 2, 10, 33};
+int main(void) {
+    int arr[] = {5, 2, 8, 1, 9, 3};
     int n = 6;
-    int temp;
-    printf("Tablica przed sortowaniem: ");
-    for(int i=0; i<n; i++) {
-        printf("%d ", arr[i]);
-    }
-    printf("\n");
+    int i, j, temp;
 
-    for(int i=0; i<n-1; i++) {
-        for(int j=0; j<n-i-1; j++) {
-            if(arr[j] > arr[j+1]) {
+    (void)printf("Tablica przed sortowaniem: ");
+    for(i = 0; i < n; i++) {
+        (void)printf("%d ", arr[i]);
+    }
+    (void)printf("\n");
+
+    for(i = 0; i < (n - 1); i++) {
+        for(j = 0; j < (n - i - 1); j++) {
+            if(arr[j] > arr[j + 1]) {
                 temp = arr[j];
-                arr[j] = arr[j+1];
-                arr[j+1] = temp;
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
             }
         }
     }
 
-    printf("Tablica po sortowaniu: ");
-    for(int i=0; i<n; i++) {
-        printf("%d ", arr[i]);
+    (void)printf("Tablica po sortowaniu: ");
+    for(i = 0; i < n; i++) {
+        (void)printf("%d ", arr[i]);
     }
+    (void)printf("\n");
 
     return 0;
 }
